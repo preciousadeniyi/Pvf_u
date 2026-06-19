@@ -1,1 +1,54 @@
 
+
+
+
+
+---
+
+### `pyproject.toml`
+
+```toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pvf-u"
+version = "1.0.0"
+description = "Unified Primitive Valence Foundation for Affective AI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Precious Adeniyi", email = "preciousadeniyi165@gmail.com"}
+]
+keywords = ["active-inference", "affective-ai", "multi-agent", "ecosystemic-intelligence"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/precious-adeniyi/pvf-u"
+Repository = "https://github.com/precious-adeniyi/pvf-u"
+Issues = "https://github.com/precious-adeniyi/pvf-u/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+docs = [
+    "sphinx>=7.0.0",
+    "sphinx-rtd-theme>=2.0.0",
+]
