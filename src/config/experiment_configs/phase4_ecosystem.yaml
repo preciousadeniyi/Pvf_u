@@ -1,1 +1,24 @@
+# Phase 4: Full Ecosystem - All features active
+# Full PVF-U with lambda_rec
 
+inherits: ../default_config.yaml
+
+layers:
+  layer1:
+    gamma: 0.5
+    gate_sensitivity: 1.0
+  
+  layer2:
+    lambda_reg: 0.29   # lambda_rec for N=50
+    panic_threshold: 2.0
+    collective_threshold: 0.3
+    recovery_steps: 50
+
+environment:
+  shape_game:
+    num_agents: 50
+    pieces: 7
+
+benchmark:
+  num_runs: 50
+  max_steps: 5000
