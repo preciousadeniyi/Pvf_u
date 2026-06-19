@@ -1,1 +1,58 @@
+# PVF-U Default Configuration
+# All parameters with explanations
 
+agent:
+  agent_dimension: 512
+  action_dim: 2
+  num_candidate_actions: 10
+  action_beta: 1.0
+
+layers:
+  layer0:
+    beta: 1.0          # Weight for Information Gain in intrinsic valence
+    tau: 10.0          # Time constant for temporal derivative
+    epsilon: 1e-8      # Numerical stability constant
+    precision_window: 100  # Window size for variance estimation
+  
+  layer1:
+    gamma: 0.5         # Relational cost weight
+    window_size: 100   # Window size for I(t) estimation
+    epsilon: 1e-8      # Numerical stability
+    gate_sensitivity: 1.0  # Sensitivity of sigmoid gate
+  
+  layer2:
+    lambda_reg: 0.29   # Influence regularization (power penalty)
+    panic_threshold: 2.0  # θ_panic for Biological Veto
+    collective_threshold: 0.3  # θ_collective for K expansion
+    K_initial: 8       # Initial narrative dimension
+    K_max: 128         # Maximum narrative dimension
+    recovery_steps: 50  # Recovery time after veto
+    epsilon: 1e-8      # Numerical stability
+
+narrative:
+  dimension: 512
+  K_initial: 8
+  K_max: 128
+  innovation_rate: 0.1
+  epsilon: 1e-8
+
+environment:
+  shape_game:
+    num_agents: 2
+    pieces: 7
+    grid_size: 10
+  
+  navigation:
+    num_agents: 2
+    grid_size: 10
+    obstacle_probability: 0.1
+  
+  dark_room:
+    dimension: 1
+
+benchmark:
+  num_runs: 50
+  max_steps: 5000
+  random_seed: 42
+
+social_update_interval: 10
