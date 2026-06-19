@@ -1,1 +1,17 @@
+# Phase 1: Sovereign Agent - Test solitary survival
+# Only Layer 0 is active
 
+inherits: ../default_config.yaml
+
+layers:
+  layer1:
+    gamma: 0.0         # Disable relational cost
+    gate_sensitivity: 0.0  # Gate always 0
+  
+  layer2:
+    lambda_reg: 0.0    # No influence regularization
+    panic_threshold: 10.0  # Disable veto
+
+environment:
+  dark_room:
+    dimension: 1
