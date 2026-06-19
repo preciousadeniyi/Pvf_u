@@ -1,1 +1,16 @@
+# Phase 2: Porous Membrane - Test gate with dummy signal
+# Layers 0 and 1 active, Layer 2 limited
 
+inherits: ../default_config.yaml
+
+layers:
+  layer1:
+    gamma: 0.1
+    gate_sensitivity: 1.0
+  
+  layer2:
+    lambda_reg: 0.0    # No influence yet
+    panic_threshold: 10.0  # Disable veto
+
+environment:
+  social_signal: true
