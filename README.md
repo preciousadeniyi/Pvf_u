@@ -1,6 +1,6 @@
 # README.md
 
-```markdown
+
 # PVF-U: Unified Primitive Valence Foundation
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXX)
@@ -12,7 +12,7 @@
 
 Implementation of **"The Unified Primitive Valence Foundation: From Solitary Survival to Ecosystemic Negotiation in Affective AI"** (Adeniyi, 2026).
 
----
+
 
 ## 📖 Overview
 
