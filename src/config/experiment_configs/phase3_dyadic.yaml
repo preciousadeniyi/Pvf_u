@@ -1,1 +1,21 @@
 
+
+
+# Phase 3: Dyadic Exchange - Test influence weights
+# All layers active, lambda = 0
+
+inherits: ../default_config.yaml
+
+layers:
+  layer1:
+    gamma: 0.5
+    gate_sensitivity: 1.0
+  
+  layer2:
+    lambda_reg: 0.0    # No power penalty yet
+    panic_threshold: 5.0  # Reduced threshold for testing
+
+environment:
+  shape_game:
+    num_agents: 2
+    pieces: 7
